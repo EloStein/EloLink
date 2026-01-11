@@ -1,6 +1,5 @@
 package de.spring.elolink_spring.entity;
 
-// Kein Entity!
 public class UuidEntity {
 
     private String uuid;

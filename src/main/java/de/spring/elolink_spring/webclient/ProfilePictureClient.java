@@ -1,23 +1,23 @@
-package de.spring.elolink_spring.http;
+package de.spring.elolink_spring.webclient;
 
 import org.springframework.http.HttpStatusCode;
 
 public class ProfilePictureClient {
 
     public static String getPfP(String uuid) {
-        return ClientConfig.CONNECTION.get()
-                .uri("/key")
+        return WebClientConfig.CONNECTION.get()
+                .uri("/pp")
                 .header("uuid", uuid)
                 .retrieve()
                 .bodyToMono(String.class)
                 .block();
     }
 
-    public static HttpStatusCode postPfP(String senderUuid, String base64) {
-        return ClientConfig.CONNECTION.post()
-                .uri("/key")
-                .header("sender", senderUuid)
-                .bodyValue(base64)
+    public static HttpStatusCode postPfP(String sender, String pfp) {
+        return WebClientConfig.CONNECTION.post()
+                .uri("/pp")
+                .header("sender", sender)
+                .bodyValue(pfp)
                 .retrieve()
                 .toBodilessEntity()
                 .block()
