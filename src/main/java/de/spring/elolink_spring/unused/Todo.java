@@ -1,4 +1,4 @@
-package de.spring.elolink_spring;
+package de.spring.elolink_spring.unused;
 
 public class Todo {
     private Long id;

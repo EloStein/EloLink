@@ -38,10 +38,6 @@ public class ChatController {
 
     @RequestMapping(value = "/elolink/db/chat/getconversation", method = RequestMethod.POST)
     public List<ChatEntity> getConversation(@RequestBody ConversationEntity conversationEntity){
-        UuidEntity u1 = new UuidEntity();
-        u1.setUuid("9ef3cf0c-fc71-45cc-abe8-76c8ca90e86b");
-        UuidEntity u2 = new UuidEntity();
-        u2.setUuid("1a0cdb45-9e19-4027-9cf3-6b8096b4fe8c");
         return chatService.getConversation(conversationEntity.getUuid1(), conversationEntity.getUuid2());
     }
 

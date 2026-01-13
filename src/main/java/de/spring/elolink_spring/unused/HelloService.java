@@ -1,4 +1,4 @@
-package de.spring.elolink_spring;
+package de.spring.elolink_spring.unused;
 
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
