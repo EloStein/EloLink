@@ -1,7 +1,5 @@
-package de.spring.elolink_spring.controller;
+package de.spring.elolink_spring.unused;
 
-import de.spring.elolink_spring.entity.ProfileEntity;
-import de.spring.elolink_spring.service.ProfileService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;

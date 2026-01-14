@@ -1,6 +1,6 @@
-package de.spring.elolink_spring.repository;
+package de.spring.elolink_spring.rest.repository;
 
-import de.spring.elolink_spring.entity.ChatEntity;
+import de.spring.elolink_spring.rest.entity.ChatEntity;
 import jakarta.transaction.Transactional;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;

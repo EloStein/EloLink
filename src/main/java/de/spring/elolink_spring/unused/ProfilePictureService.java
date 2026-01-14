@@ -1,7 +1,5 @@
-package de.spring.elolink_spring.service;
+package de.spring.elolink_spring.unused;
 
-import de.spring.elolink_spring.entity.ProfilePictureRecord;
-import de.spring.elolink_spring.entity.UuidEntity;
 import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
 

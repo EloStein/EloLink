@@ -1,6 +1,4 @@
-package de.spring.elolink_spring.entity;
-
-import java.util.HashMap;
+package de.spring.elolink_spring.unused;
 
 public class ConversationEntity {
 

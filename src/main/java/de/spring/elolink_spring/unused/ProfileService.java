@@ -1,7 +1,5 @@
-package de.spring.elolink_spring.service;
+package de.spring.elolink_spring.unused;
 
-import de.spring.elolink_spring.entity.ProfileEntity;
-import de.spring.elolink_spring.repository.ProfileRepository;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -1,7 +1,5 @@
-package de.spring.elolink_spring.repository;
+package de.spring.elolink_spring.unused;
 
-import de.spring.elolink_spring.entity.ProfileEntity;
-import de.spring.elolink_spring.entity.StudentEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;

@@ -1,17 +1,17 @@
-package de.spring.elolink_spring.service;
+package de.spring.elolink_spring.rest.service;
 
-import de.spring.elolink_spring.entity.ChatEntity;
-import de.spring.elolink_spring.entity.ProfileEntity;
-import de.spring.elolink_spring.entity.StudentEntity;
-import de.spring.elolink_spring.entity.UuidEntity;
-import de.spring.elolink_spring.repository.ChatRepository;
-import de.spring.elolink_spring.repository.ProfileRepository;
+import de.spring.elolink_spring.encryption.KeyGenerator;
+import de.spring.elolink_spring.rest.dto.ChatDto;
+import de.spring.elolink_spring.rest.entity.ChatEntity;
+import de.spring.elolink_spring.unused.UuidEntity;
+import de.spring.elolink_spring.rest.repository.ChatRepository;
+import de.spring.elolink_spring.webclient.EloLinkClient;
+import de.spring.elolink_spring.webclient.RequestBody;
 import jakarta.transaction.Transactional;
-import org.apache.logging.log4j.util.Strings;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.lang.invoke.CallSite;
+import javax.crypto.SecretKey;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -22,13 +22,28 @@ public class ChatService {
 
     @Autowired
     private ChatRepository chatRepository;
+    private EloLinkClient eloLinkClient;
 
-    @Transactional
-    public String addChat(ChatEntity chatEntity) {
-            chatEntity.setId(null == chatRepository.findMaxId() ? 0 : chatRepository.findMaxId() + 1);
-            chatRepository.save(chatEntity);
-            return "#Saved Chat " + chatEntity.getMessage() + " added successfully";
+    public String addChat(ChatDto chatDto) {
+
+//        SecretKey aesKeyOwn = KeyGenerator.genAesKey();
+//        SecretKey aesKeyRec = KeyGenerator.genAesKey();
+
+
+        RequestBody requestBody = RequestBody.fromChatDto(chatDto);
+        requestBody.put("signature","false");
+        return requestBody.get("sender").toString();
     }
+
+
+
+
+
+
+
+
+
+
 
     public List<ChatEntity> getChats(){
         return chatRepository.findAll();

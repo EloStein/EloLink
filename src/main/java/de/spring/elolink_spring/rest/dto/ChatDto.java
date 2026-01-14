@@ -3,27 +3,17 @@ package de.spring.elolink_spring.rest.dto;
 
 public class ChatDto {
 
-    private String signature;
     private String sender;
     private String receiver;
     private String message;
-    private String aesKeyRec;
-    private String aesKeyOwn;
-    private String spec;
-    private String timestamp;
 
     public ChatDto(){
     }
 
-    public ChatDto(String signature, String sender, String receiver, String message, String aesKeyRec, String aesKeyOwn, String spec, String timestamp) {
-        this.signature = signature;
+    public ChatDto(String sender, String receiver, String message) {
         this.sender = sender;
         this.receiver = receiver;
         this.message = message;
-        this.aesKeyRec = aesKeyRec;
-        this.aesKeyOwn = aesKeyOwn;
-        this.spec = spec;
-        this.timestamp = timestamp;
     }
 
     /*
@@ -39,14 +29,6 @@ public class ChatDto {
             );
         }
     */
-
-    public String getSignature() {
-        return signature;
-    }
-
-    public void setSignature(String signature) {
-        this.signature = signature;
-    }
 
     public String getSender() {
         return sender;
@@ -72,48 +54,12 @@ public class ChatDto {
         this.message = message;
     }
 
-    public String getAesKeyRec() {
-        return aesKeyRec;
-    }
-
-    public void setAesKeyRec(String aesKeyRec) {
-        this.aesKeyRec = aesKeyRec;
-    }
-
-    public String getAesKeyOwn() {
-        return aesKeyOwn;
-    }
-
-    public void setAesKeyOwn(String aesKeyOwn) {
-        this.aesKeyOwn = aesKeyOwn;
-    }
-
-    public String getSpec() {
-        return spec;
-    }
-
-    public void setSpec(String spec) {
-        this.spec = spec;
-    }
-
-    public String getTimestamp() {
-        return timestamp;
-    }
-
-    public void setTimestamp(String timestamp) {
-        this.timestamp = timestamp;
-    }
-
     @Override
     public String toString() {
         return "ChatDto{" +
-                "signature='" + signature + '\'' +
-                ", sender='" + sender + '\'' +
+                "sender='" + sender + '\'' +
                 ", receiver='" + receiver + '\'' +
                 ", message='" + message + '\'' +
-                ", aesKeyRec='" + aesKeyRec + '\'' +
-                ", aesKeyOwn='" + aesKeyOwn + '\'' +
-                ", timestamp='" + timestamp + '\'' +
                 '}';
     }
 }

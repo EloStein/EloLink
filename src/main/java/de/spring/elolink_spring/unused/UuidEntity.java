@@ -1,4 +1,4 @@
-package de.spring.elolink_spring.entity;
+package de.spring.elolink_spring.unused;
 
 public class UuidEntity {
 

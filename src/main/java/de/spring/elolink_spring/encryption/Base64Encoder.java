@@ -32,7 +32,6 @@ public class Base64Encoder {
         X509EncodedKeySpec keySpec = new X509EncodedKeySpec(bytes);
         KeyFactory factory = KeyFactory.getInstance("RSA");
         return factory.generatePublic(keySpec);
-
     }
 
 

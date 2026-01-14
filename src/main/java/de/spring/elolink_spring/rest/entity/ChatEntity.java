@@ -1,4 +1,4 @@
-package de.spring.elolink_spring.entity;
+package de.spring.elolink_spring.rest.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
